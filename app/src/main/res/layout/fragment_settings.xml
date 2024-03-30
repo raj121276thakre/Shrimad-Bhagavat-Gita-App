@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SettingsFragment">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llBhagwatGita"
+            android:layout_width="wrap_content"
+            android:layout_height="65.00dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="13.00dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="19.50dp"
+                android:layout_height="19.50dp"
+                android:src="@drawable/kalash" />
+
+            <TextView
+                android:id="@+id/tvChapterNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2.60dp"
+                android:text="@string/app_name"
+                android:textColor="@color/orange"
+                android:textSize="26.00sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="19.50dp"
+                android:layout_height="19.50dp"
+                android:src="@drawable/kalash" />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="26.00dp"
+            android:layout_marginTop="65.00dp"
+            android:clickable="true"
+            android:elevation="2.60dp"
+            android:focusable="true"
+            app:cardCornerRadius="6.50dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/savedVerses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_iv_chapters"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="6.50dp"
+
+                >
+
+                <!--                chapters-->
+                <LinearLayout
+                    android:id="@+id/llSavedChapters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/save_texts" />
+
+                    <TextView
+                        android:id="@+id/tvSavedChapters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="2.60dp"
+                        android:layout_weight="0.8"
+                        android:text="Saved Chapters"
+                        android:textColor="@color/orange"
+                        android:textSize="18.20sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/arrow_right"
+                        app:tint="@color/orange" />
+
+                </LinearLayout>
+
+                <!--                verses-->
+                <LinearLayout
+                    android:id="@+id/llSavedVerses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/save" />
+
+                    <TextView
+                        android:id="@+id/tvSavedVerses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginHorizontal="2.60dp"
+                        android:layout_weight="0.8"
+                        android:text="Saved Verses"
+                        android:textColor="@color/orange"
+                        android:textSize="18.20sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="32.50dp"
+                        android:layout_height="32.50dp"
+                        android:layout_weight="0.1"
+                        android:src="@drawable/arrow_right"
+                        app:tint="@color/orange" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="260.00dp"
+        android:layout_height="260.00dp"
+        android:alpha="0.2"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/krsna"
+        app:layout_constraintBottom_toTopOf="@id/tvMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop" />
+
+    <ImageView
+        android:id="@+id/backgroundImage1"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:alpha="0.2"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/verse_top_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTop" />
+
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2.60dp"
+        android:layout_margin="39.00dp"
+        android:gravity="center"
+        android:padding="3.90dp"
+        android:text="I hope you liked the app.."
+        android:textColor="@color/orange"
+        android:textSize="14.30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_vertical"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

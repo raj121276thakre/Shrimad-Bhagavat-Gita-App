@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="2.60dp"
+    app:cardUseCompatPadding="true"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="6.50dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/chapter_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:padding="6.50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:background="@drawable/bg_shimmer"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="26.00dp"
+                    android:layout_height="26.00dp"
+
+                    android:layout_weight="0.1"
+                    app:tint="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tvVerseNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="13.00dp"
+                    android:textSize="15.60sp"
+                    android:layout_weight="2.8"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/ivNext"
+                    android:layout_width="26.00dp"
+                    android:layout_height="26.00dp"
+                    android:layout_weight="0.1"
+                    app:tint="@color/orange" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:background="@drawable/bg_shimmer"
+                android:id="@+id/tvVerse"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="5.20dp"
+                android:layout_weight="2"
+                android:maxLines="4"
+                android:padding="3.90dp"
+                android:textColor="@color/black"
+                android:textSize="15.60sp" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="78.00dp"
+            android:layout_height="78.00dp"
+            android:alpha="0.3"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/verse_top_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/backgroundImage3"
+            android:layout_width="78.00dp"
+            android:layout_height="78.00dp"
+            android:alpha="0.4"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/verse_chakra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backgroundImage2"
+            android:layout_width="78.00dp"
+            android:layout_height="78.00dp"
+            android:alpha="0.6"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/down_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

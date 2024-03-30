@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.fragments.VerseDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llBhagwatGita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65.00dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="13.00dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="19.50dp"
+                            android:layout_height="19.50dp"
+                            android:src="@drawable/kalash" />
+
+                        <TextView
+                            android:id="@+id/tvChapterNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="2.60dp"
+                            android:text="@string/app_name"
+                            android:textColor="@color/orange"
+                            android:textSize="26.00sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="19.50dp"
+                            android:layout_height="19.50dp"
+                            android:src="@drawable/kalash" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivFavouriteFilled"
+                                android:layout_width="39.00dp"
+                                android:layout_height="39.00dp"
+                                android:hapticFeedbackEnabled="true"
+                                android:src="@drawable/baseline_favorite_24"
+                                android:visibility="gone"
+                                app:tint="@color/orange" />
+
+                            <ImageView
+                                android:id="@+id/ivFavourite"
+                                android:layout_width="39.00dp"
+                                android:layout_height="39.00dp"
+                                android:hapticFeedbackEnabled="true"
+                                android:src="@drawable/baseline_favorite_border_24"
+                                android:visibility="gone"
+                                app:tint="@color/orange" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/orange"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/orange"
+                    app:layout_anchor="@id/llBhagwatGita"
+                    app:layout_anchorGravity="bottom"
+                    app:trackColor="#F8D6C9" />
+
+                <TextView
+                    android:id="@+id/tvVerseNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="||1.6||"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="22.10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvVerseText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13.00dp"
+                    android:gravity="center"
+                    android:text="धृतराष्ट्र उवाच |धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय "
+                    android:textColor="@color/orange"
+                    android:textSize="19.50sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="@dimen/_3sdp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tvtranliterationIfEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16.50dp"
+                    android:layout_marginTop="13.20dp"
+                    android:maxLines="4"
+                    android:padding="8.90dp"
+                    android:text="dhṛitarāśhtra uvācha dharma-kṣhetre kuru-kṣhetre samavetā yuyutsavaḥ māmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya"
+                    android:textColor="@color/black"
+                    android:textSize="15.60sp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/tvWordIfEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16.50dp"
+                    android:layout_marginTop="13.20dp"
+                    android:maxLines="4"
+                    android:padding="8.90dp"
+                    android:text="dhṛitarāśhtraḥ uvācha—Dhritarashtra said; dharma-kṣhetre—the land of dharma; kuru-kṣhetre—at Kurukshetra; samavetāḥ—having gathered; yuyutsavaḥ—desiring to fight; māmakāḥ—my sons; pāṇḍavāḥ—the sons of Pandu; cha—and; eva—certainly; kim—what; akurvata—did they do; sañjaya—Sanjay"
+                    android:textColor="@color/black"
+                    android:textSize="15.60sp"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="65.00dp"
+                    android:src="@drawable/verse_view"
+                    android:visibility="gone" />
+
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/backgroundImage"
+                android:layout_width="260.00dp"
+                android:layout_height="260.00dp"
+                android:layout_marginTop="39.00dp"
+                android:visibility="gone"
+                android:alpha="0.15"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/krsna"
+                app:layout_constraintBottom_toTopOf="@id/llBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="13.00dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llTop">
+
+                <TextView
+                    android:id="@+id/tvTranslation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:layout_marginTop="13.00dp"
+                    android:gravity="center"
+                    android:text="Translations"
+                    android:textColor="@color/black"
+                    android:textSize="19.50sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13.00dp"
+                    android:layout_marginTop="6.50dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="6.50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="6.50dp">
+
+                            <TextView
+                                android:id="@+id/tvAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" : "
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvAuthorName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swami Vivek Nanda"
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="6.50dp"
+                            android:paddingBottom="26.00dp"
+                            android:text="Dhritarashtra said: O Sanjay, after gathering on the holy field of Kurukshetra, and desiring to fight, what did my sons and the sons of Pandu do?"
+                            android:textColor="#000000"
+                            android:textSize="16.90sp"
+
+
+                            />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9.10dp"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/arrow_right"
+                        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+                        app:layout_constraintEnd_toEndOf="@id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabTranslationLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9.10dp"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/arrow_left"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/linearLayout"
+                        app:layout_constraintStart_toStartOf="@id/linearLayout"
+                        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/tvCommentries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6.50dp"
+                    android:layout_marginTop="13.00dp"
+                    android:gravity="center"
+                    android:text="Commentries"
+                    android:textColor="@color/black"
+                    android:textSize="19.50sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clCommentries"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="13.00dp"
+                    android:layout_marginTop="6.50dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llComentry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_verse_card"
+                        android:orientation="vertical"
+                        android:padding="6.50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="6.50dp">
+
+                            <TextView
+                                android:id="@+id/tvAuthorCommentry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Author"
+                                android:textColor="#575656"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvArrowCommentry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" : "
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/tvAuthorNameCommentry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Swami Vivek Nanda"
+                                android:textColor="#000000"
+                                android:textSize="13.00sp"
+                                android:textStyle="bold"
+
+                                />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvTextCommentry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="3"
+                            android:paddingHorizontal="6.50dp"
+                            android:text="Dhritarashtra said: O Sanjay, after gathering on the holy field of Kurukshetra, and desiring to fight, what did my sons and the sons of Pandu do?"
+                            android:textColor="#000000"
+                            android:textSize="16.90sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvSeeMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6.50dp"
+                            android:gravity="center"
+                            android:paddingBottom="26.00dp"
+                            android:text="Read More..."
+                            android:textColor="#0051F4"
+                            android:textSize="14.30sp"
+                            android:textStyle="italic" />
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentriesRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9.10dp"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/arrow_right"
+                        app:layout_constraintBottom_toBottomOf="@id/llComentry"
+                        app:layout_constraintEnd_toEndOf="@id/llComentry"
+                        app:layout_constraintTop_toBottomOf="@id/llComentry"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabCommentriesLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9.10dp"
+                        android:backgroundTint="@color/orange"
+                        android:src="@drawable/arrow_left"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/llComentry"
+                        app:layout_constraintStart_toStartOf="@id/llComentry"
+                        app:layout_constraintTop_toBottomOf="@id/llComentry"
+                        app:tint="@color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvShowingMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3.90dp"
+                android:text="No internet connection! \n check for saved chapters in settings"
+                android:textColor="@color/orange"
+                android:textSize="14.30sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/_200sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
