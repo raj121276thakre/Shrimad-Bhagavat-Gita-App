@@ -105,11 +105,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="2.60dp"
                 android:padding="3.90dp"
+                android:maxLines="5"
                 android:gravity="center"
                 android:text="@string/verse_of_the_day"
                 android:textColor="@color/orange"
                 android:textSize="15.60sp"
                 android:textStyle="bold" />
+
 
         </LinearLayout>
 
@@ -119,7 +121,7 @@
             android:layout_height="match_parent"
             android:alpha="0.2"
             android:scaleType="centerCrop"
-            android:src="@drawable/rk" />
+            android:src="@drawable/rk2" />
 
     </androidx.cardview.widget.CardView>
 

@@ -51,7 +51,7 @@
         android:layout_marginHorizontal="@dimen/_7sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:padding="3.90dp"
-        android:text="Chapters"
+        android:text="Saved Chapters"
         android:textColor="@color/black"
         android:textSize="@dimen/_18ssp"
         android:textStyle="bold"

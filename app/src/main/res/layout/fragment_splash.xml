@@ -10,8 +10,8 @@
 
   <ImageView
       android:id="@+id/backgroundImage"
-      android:layout_width="260.00dp"
-      android:layout_height="260.00dp"
+      android:layout_width="170.00dp"
+      android:layout_height="200.00dp"
       android:alpha="0.3"
       android:background="@android:color/transparent"
       android:scaleType="centerInside"
@@ -21,35 +21,39 @@
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
+
   <ImageView
+      android:id="@+id/imageView"
       android:layout_width="@dimen/_80sdp"
       android:layout_height="@dimen/_80sdp"
-      android:src="@drawable/splash_icon"
       android:background="@drawable/bg_iv_chapters"
-      app:layout_constraintBottom_toBottomOf="parent"
+      android:src="@drawable/logo"
+      app:layout_constraintBottom_toBottomOf="@+id/backgroundImage"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      />
-
+      app:layout_constraintVertical_bias="0.864" />
 
   <TextView
       android:id="@+id/tvMessage"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginHorizontal="2.60dp"
+      android:layout_gravity="center_vertical"
       android:layout_margin="39.00dp"
+      android:layout_marginHorizontal="2.60dp"
       android:gravity="center"
       android:padding="3.90dp"
-      android:text="I hope you liked the app.."
+      android:text="@string/app_name"
       android:textColor="@color/orange"
-      android:textSize="14.30sp"
+      android:textSize="20.30sp"
       android:textStyle="bold"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
-      android:layout_gravity="center_vertical"
-      />
+      app:layout_constraintTop_toTopOf="@+id/backgroundImage"
+      app:layout_constraintVertical_bias="0.411" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

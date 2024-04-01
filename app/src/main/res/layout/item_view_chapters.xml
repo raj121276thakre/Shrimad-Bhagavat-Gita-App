@@ -103,7 +103,7 @@
                 android:maxLines="3"
                 android:padding="3.90dp"
                 android:text="Lorem ipsnt occa deserunt mollit anim id est laborum."
-                android:textColor="@color/chapterDetails"
+                android:textColor="@color/black"
                 android:textSize="15.60sp"
                 app:layout_goneMarginTop="6.50dp" />
 

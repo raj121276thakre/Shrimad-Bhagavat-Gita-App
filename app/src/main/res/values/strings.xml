@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">Shrimad Bhagavat Gita</string>
+    <string name="app_name">Shrimad Bhagavad Gita</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="verse_of_the_day">The Blessed Lord said, \"O Arjuna, hear how you shall, without doubt, know Me fully, with your mind intent on Me, practicing Yoga and taking refuge in Me.\"</string>
+    <string name="share_app_title">Shrimad Bhagavad Gita</string>
+    <string name="share_app_message">Check out this amazing app!\n\nDownload it now from the Play Store:\n</string>
+    <string name="share_app_subject">Check out this app!</string>
+    <string name="privacy_policy">https://doc-hosting.flycricket.io/shreemad-bhagwat-gita/820b25ea-b110-472f-b108-a1d14cd30241/terms</string>
 </resources>
